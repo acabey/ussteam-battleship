@@ -1,4 +1,4 @@
-
+import java.util.Scanner;
 
 public class Battleship {
     
@@ -66,7 +66,7 @@ public class Battleship {
          Destroyer 	      2
         */
         
-        String[] ships = ["Carrier (5)", "Battleship (4)", "Submarine (3)", "Destroyer (2)"];
+        String[] ships = {"Carrier (5)", "Battleship (4)", "Submarine (3)", "Destroyer (2)"};
         
         for (String ship : ships) {
             
@@ -101,7 +101,7 @@ public class Battleship {
                 }
                 
                 while (! (direction.toLower().equals("up") || direction.toLower().equals("down") || direction.toLower().equals("left") || direction.toLower().equals("right"))) {
-                    System.out.println("Enter a direction (Up, Down, Left, Right)")
+                    System.out.println("Enter a direction (Up, Down, Left, Right)");
                     direction = kbInput.nextLine();
                 }
             }
@@ -153,12 +153,13 @@ public class Battleship {
         initBoard();
         // - Place Ships
         
-        System.out.println("Player one, place your ships! (Player two look away)")
+        System.out.println("Player one, place your ships! (Player two look away)");
         
         placeShips(boardOne);
         // - - Ask for positions
         // - - Check positions
         // - - Save position
+        kbInput.nextLine();
         
         
         // Play game
